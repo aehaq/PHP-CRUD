@@ -1,6 +1,7 @@
+<!-- PHP Code for connecting to and submitting to database  -->
 <?php 
-
 require "../config.php";
+require "../common.php";
 
 // The following will run when the form with method 'post' is submitted.
 if (isset($_POST['submit'])) {
@@ -41,8 +42,17 @@ if (isset($_POST['submit'])) {
 
 ?>
 
+<!-- Title Card -->
 <?php include "templates/header.php"; ?>
 
+<!-- Dynamic Success Message -->
+<?php if (isset($_POST['submit']) && $statement) { ?>
+    <blockquote> 
+        <?php echo escape($_POST['firstname'] . " " . $_POST['lastname']) ?> successfully added.
+    </blockquote>
+<?php }?>
+
+<!-- Base HTML Form -->
     <h2> Add contact info </h2>
 
     <form method="post">
