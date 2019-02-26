@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
     </blockquote>
 <?php }?>
 
-<!-- Base HTML Form -->
+<!-- Base HTML Create Form -->
     <h2> Add contact info </h2>
 
     <form method="post">

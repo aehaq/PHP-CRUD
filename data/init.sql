@@ -10,10 +10,6 @@ CREATE TABLE users (
     lastname VARCHAR(100) NOT NULL,
     email VARCHAR(50) NOT NULL,
     location VARCHAR(100) NOT NULL,
-    DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
-
-INSERT INTO users (firstname, lastname, email, location)
-VALUES
-("Azzi", "Haq", "azfarehaq@gmail.com", "San Francisco");
