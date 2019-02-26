@@ -1,12 +1,12 @@
 <!-- PHP Code for connecting to and submitting to database  -->
 <?php 
+require "../config.php";
+require "../common.php";
 
 // The following will run when the form with method 'post' is submitted.
 if (isset($_POST['submit'])) {
     
     try {
-        require "../config.php";
-        require "../common.php";
         
         // Connecting to the existing database, hence $dsn instead of just host
         $connection = new PDO($dsn, $username, $password, $options);
@@ -32,7 +32,9 @@ if (isset($_POST['submit'])) {
 <?php include "templates/header.php"; ?>
 
 <!-- Dynamic Results Table -->
-<?php if (isset($_POST['submit']) && $statement->rowCount() > 0) { ?>
+<?php 
+if (isset($_POST['submit'])) {
+    if ($result && $statement->rowCount() > 0) { ?>
     <h2> Results </h2>
 
     <table>
@@ -59,9 +61,10 @@ if (isset($_POST['submit'])) {
     </table>
 <?php } else { ?>
     <blockquote>
-        No results found for <?php echo escape($_POST['location']) ?>
+        No results found for <?php echo escape($_POST['location']); ?>
     </blockquote>
-<?php } ?>
+<?php } 
+}?>
 
 <!-- Base HTML Request Form -->
     <h2> Find users based off location </h2>
