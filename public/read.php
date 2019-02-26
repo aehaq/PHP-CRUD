@@ -57,6 +57,10 @@ if (isset($_POST['submit'])) {
             <?php }?>
         </tbody>
     </table>
+<?php } else { ?>
+    <blockquote>
+        No results found for <?php echo escape($_POST['location']) ?>
+    </blockquote>
 <?php } ?>
 
 <!-- Base HTML Request Form -->
