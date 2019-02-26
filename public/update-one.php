@@ -3,14 +3,16 @@
 require "../config.php";
 require "../common.php";
 
-if (isset($_Get['id'])) {
+
+if (isset($_GET['id'])) {
+
     try {
         
         // Connecting to the existing database, hence $dsn instead of just host
         $connection = new PDO($dsn, $username, $password, $options);
-
+    
         // Set ID as variable fore ease of use
-        $id= $_GET['id'];
+        $id = $_GET['id'];
     
         // Our SQL query
         $sql = 'SELECT * FROM USERS WHERE id = ' . $id;
@@ -27,14 +29,64 @@ if (isset($_Get['id'])) {
     }
 }
 
+// The following will run when the form with method 'post' is submitted.
+if (isset($_POST['submit'])) {
+    
+    try {
+
+        // First we create an array from the POST data
+        $user = [
+            "id" => $id,
+            "firstname" => $_POST['firstname'], 
+            "lastname" => $_POST['lastname'], 
+            "location" => $_POST['location'], 
+            "email" => $_POST['email']
+        ];
+
+        // the sprintf function allows us to create a formatted string, which will be our dynamically generated sql query
+        $sql = sprintf(
+            "UPDATE users SET firstname = %s, lastname = %s, location = %s, email = %s WHERE id = ". $id,
+            '"' . $user["firstname"] . '"',
+            '"' . $user["lastname"] . '"',
+            '"' . $user["location"] . '"',
+            '"' . $user["email"] . '"'
+        );
+
+        // Prepare SQL Code
+        $statement = $connection->prepare($sql);
+
+        // Execute SQL Code
+        $statement->execute($user);
+
+    } catch(PDOException $error) {
+        echo $sql . "<br>" . $error->getMessage();
+    }
+}
+
 ?>
 
 <?php include "templates/header.php"; ?>
 
-<h2> Update Single </h2>
+<h2> Update User at ID "<?php echo escape($result["id"])?>" </h2>
 
-    <?php echo escape($id)?>
+<?php if (isset($_POST['submit']) && $statement) { ?>
+    <blockquote> User #<?php echo escape($result["id"])?> succesfully updated. </blockquote>
+<?php }?>
 
+    <form method="post">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" value="<?php echo escape($result["firstname"])?>">
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" value="<?php echo escape($result["lastname"])?>">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" value="<?php echo escape($result["location"])?>">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" value="<?php echo escape($result["email"])?>">
+        <input type="submit" name="submit" value="Update">
+    </form>
+    
+
+    <br>
     <a href="update.php"> Return to Update Page </a>
     <a href="index.php"> Return Home </a>
 
