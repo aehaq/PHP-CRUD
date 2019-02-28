@@ -27,7 +27,7 @@ try {
 <?php include "templates/header.php"; ?>
 
 <h2> Update Users </h2>
-
+<?php if ($result && $statement->rowCount() > 0) { ?>
     <table>
         <thead>
             <th>ID</th>
@@ -52,6 +52,11 @@ try {
             <?php }?>
         </tbody>
     </table>
+<?php } else { ?>
+    <blockquote>
+        Database currently empty. Please create users to test other features.
+    </blockquote>
+<?php }?>
 
     <a href="index.php"> Return Home </a>
 

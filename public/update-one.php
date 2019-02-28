@@ -74,15 +74,15 @@ if (isset($_POST['submit'])) {
 <?php }?>
 
     <form method="post">
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" id="firstname" value="<?php echo escape($result["firstname"])?>">
-        <label for="lastname">Last Name</label>
-        <input type="text" name="lastname" id="lastname" value="<?php echo escape($result["lastname"])?>">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location" value="<?php echo escape($result["location"])?>">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" value="<?php echo escape($result["email"])?>">
-        <input type="submit" name="submit" value="Update">
+        <label for="firstname">First Name</label><br/>
+        <input type="text" name="firstname" id="firstname" value="<?php echo escape($result["firstname"])?>"><br/>
+        <label for="lastname">Last Name</label><br/>
+        <input type="text" name="lastname" id="lastname" value="<?php echo escape($result["lastname"])?>"><br/>
+        <label for="location">Location</label><br/>
+        <input type="text" name="location" id="location" value="<?php echo escape($result["location"])?>"><br/>
+        <label for="email">Email Address</label><br/>
+        <input type="email" name="email" id="email" value="<?php echo escape($result["email"])?>"><br/>
+        <input type="submit" name="submit" value="Update"><br/>
     </form>
     
 

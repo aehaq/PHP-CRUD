@@ -56,14 +56,14 @@ if (isset($_POST['submit'])) {
     <h2> Add contact info </h2>
 
     <form method="post">
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" id="firstname">
-        <label for="lastname">Last Name</label>
-        <input type="text" name="lastname" id="lastname">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email">
+        <label for="firstname">First Name</label><br/>
+        <input type="text" name="firstname" id="firstname"><br/>
+        <label for="lastname">Last Name</label><br/>
+        <input type="text" name="lastname" id="lastname"><br/>
+        <label for="location">Location</label><br/>
+        <input type="text" name="location" id="location"><br/>
+        <label for="email">Email Address</label><br/>
+        <input type="email" name="email" id="email"><br/>
         <input type="submit" name="submit" value="Submit">
     </form>
 
