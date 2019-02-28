@@ -1,5 +1,6 @@
 <!-- PHP Code for connecting to and submitting to database  -->
 <?php 
+$page = "create";
 require "../config.php";
 require "../common.php";
 

@@ -1,5 +1,5 @@
 <?php 
-
+$page = "update";
 require "../config.php";
 require "../common.php";
 

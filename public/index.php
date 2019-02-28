@@ -1,4 +1,7 @@
-<?php include "templates/header.php"; ?>
+<?php 
+$page = "";
+include "templates/header.php"; 
+?>
 
     <div class="nav-section"> 
         <a class="nav-buttons" href="../public/create.php"> Create </a>

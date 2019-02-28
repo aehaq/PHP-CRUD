@@ -8,3 +8,24 @@
 </head>
 <body>
     <h1> CRUD demo w/ PHP </h1>
+
+    <?php 
+    
+    if ($page == "create" ) {
+        echo "<h1> Create </h1>";
+    }
+
+    if ($page == "read" ) {
+        echo "<h1> Read </h1>";
+    }
+
+    if ($page == "update" ) {
+        echo "<h1> Update </h1>";
+    }
+
+    if ($page == "delete" ) {
+        echo "<h1> Delete </h1>";
+    }
+
+
+    ?>

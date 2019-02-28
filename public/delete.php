@@ -1,4 +1,5 @@
 <?php 
+$page = "delete";
 require "../config.php";
 require "../common.php";
 
