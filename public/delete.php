@@ -53,6 +53,7 @@ try {
 <?php include "templates/header.php"; ?>
 
 <h2> Delete Users </h2>
+<hr/>
 
 <?php if ($result && $statement->rowCount() > 0) { ?>
 

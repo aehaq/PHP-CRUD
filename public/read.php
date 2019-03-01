@@ -37,6 +37,7 @@ if (isset($_POST['submit'])) {
 if (isset($_POST['submit'])) {
     if ($result && $statement->rowCount() > 0) { ?>
     <h2> Results </h2>
+    <hr/>
 
     <table>
         <thead>

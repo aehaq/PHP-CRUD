@@ -68,6 +68,7 @@ if (isset($_POST['submit'])) {
 <?php include "templates/header.php"; ?>
 
 <h2> Update User at ID "<?php echo escape($result["id"])?>" </h2>
+<hr/>
 
 <?php if (isset($_POST['submit']) && $statement) { ?>
     <blockquote> User #<?php echo escape($result["id"])?> succesfully updated. </blockquote>

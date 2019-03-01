@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
 
 <!-- Base HTML Create Form -->
     <h2> Add contact info </h2>
+    <hr/>
 
     <form method="post">
         <label for="firstname">First Name</label><br/>

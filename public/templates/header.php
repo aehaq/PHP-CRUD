@@ -8,9 +8,16 @@
     <title>PHP CRUD App</title>
 </head>
 <body>
-    <nav class="nav">
-        <a <?php if ($page=="create") {echo 'class="nav-link active disabled"';} else {echo 'class="nav-link"';}?> href="../public/create.php">Create</a>
-        <a <?php if ($page=="read") {echo 'class="nav-link active disabled"';} else {echo 'class="nav-link"';}?> href="../public/read.php">Read</a>
-        <a <?php if ($page=="update") {echo 'class="nav-link active disabled"';} else {echo 'class="nav-link"';}?> href="../public/update.php">Update</a>
-        <a <?php if ($page=="delete") {echo 'class="nav-link active disabled"';} else {echo 'class="nav-link"';}?> href="../public/delete.php">Delete</a>
-    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="nav nav-pills nav-fill">
+                    <a <?php if ($page=="create") {echo 'class="nav-link nav-item active"';} else {echo 'class="nav-link nav-item"';}?> href="../public/create.php">Create</a>
+                    <a <?php if ($page=="read") {echo 'class="nav-link nav-item active"';} else {echo 'class="nav-link nav-item"';}?> href="../public/read.php">Read</a>
+                    <a <?php if ($page=="update") {echo 'class="nav-link nav-item active"';} else {echo 'class="nav-link nav-item"';}?> href="../public/update.php">Update</a>
+                    <a <?php if ($page=="delete") {echo 'class="nav-link nav-item active"';} else {echo 'class="nav-link nav-item"';}?> href="../public/delete.php">Delete</a>
+                </nav>
+            </div>
+        </div>
+        <div class="jumbotron">
+    

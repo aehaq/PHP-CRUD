@@ -28,6 +28,8 @@ try {
 <?php include "templates/header.php"; ?>
 
 <h2> Update Users </h2>
+<hr/>
+
 <?php if ($result && $statement->rowCount() > 0) { ?>
     <table>
         <thead>
