@@ -3,24 +3,10 @@ $page = "";
 include "templates/header.php"; 
 ?>
 
-    <div class="nav-section"> 
-        <a class="nav-buttons" href="../public/create.php"> Create </a>
-        <p> Add a database entry </p>
-    </div>
-
-    <div class="nav-section"> 
-        <a class="nav-buttons" href="../public/read.php"> Read </a>
-        <p> View database entries </p>
-    </div>
-
-    <div class="nav-section"> 
-        <a class="nav-buttons" href="../public/update.php"> Update </a>
-        <p> Make changes to a database entry </p>
-    </div>
-
-    <div class="nav-section"> 
-        <a class="nav-buttons" href="../public/delete.php"> Delete </a>
-        <p> Remove a database entry </p>
-    </div>
+    <h2> Welcome to this PHP CRUD Demo. </h2>
+    <p> If you have not yet installed or desire to reset the database, please click the button below. </p>
+    <a class="btn btn-primary" href="../install.php" role="button">Link</a>
+    <br/>
+    <p> Once you have initialized the database, you may navigate the tabs above to Create, Read, Update, and Delete entries.</p>
 
 <?php include "templates/footer.php"; ?>
