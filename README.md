@@ -1,1 +1,3 @@
 # PHP-CRUD
+
+This collection of files sets up a basic database of users on your machine and provides an interface to Create, Read, Update, and Delete entries in said database. The code is explained with consistent commenting throughout the project, such that you should be able to easily repurpose the database with basic working knowledge of HTML and SQL, as well as an understanding of PHP syntax. This project began as an interpretation of Tania Rascia's CRUD setup tutorial, which you can find at [this link](https://www.taniarascia.com/create-a-simple-database-app-connecting-to-mysql-with-php/). Please note that there are many differences between the application built in the tutorial and my final product, as I only used the tutorial as a loose guide.
